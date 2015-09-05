@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+    "strings"
 
 	"golang.org/x/net/html"
 )
@@ -49,6 +50,15 @@ func NewDocumentFromReader(r io.Reader) (*Document, error) {
 		return nil, e
 	}
 	return newDocument(root, nil), nil
+}
+
+
+// NewDocumentFromString is another Document constructor that takes an String as argument.
+// It build a reader from the given string, parses it, and stores the root Document
+// node, ready to be manipulated. The response's body is closed on return.
+func NewDocumentFromString(src string) (*Document, error) {
+    r, _ := strings.NewReader(src)
+    return NewDocumentFromReader(r)
 }
 
 // NewDocumentFromResponse is another Document constructor that takes an http response as argument.
