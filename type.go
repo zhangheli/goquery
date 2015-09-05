@@ -57,7 +57,7 @@ func NewDocumentFromReader(r io.Reader) (*Document, error) {
 // It build a reader from the given string, parses it, and stores the root Document
 // node, ready to be manipulated. The response's body is closed on return.
 func NewDocumentFromString(src string) (*Document, error) {
-    r, _ := strings.NewReader(src)
+    r := strings.NewReader(src)
     return NewDocumentFromReader(r)
 }
 
