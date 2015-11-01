@@ -14,22 +14,22 @@ Syntax-wise, it is as close as possible to jQuery, with the same function names 
 
 Please note that because of the net/html dependency, goquery requires Go1.1+.
 
-    $ go get github.com/PuerkitoBio/goquery
+    $ go get github.com/zhangheli/goquery
 
 (optional) To run unit tests:
     
-    $ cd $GOPATH/src/github.com/PuerkitoBio/goquery
+    $ cd $GOPATH/src/github.com/zhangheli/goquery
     $ go test
 
 (optional) To run benchmarks (warning: it runs for a few minutes):
 
-    $ cd $GOPATH/src/github.com/PuerkitoBio/goquery
+    $ cd $GOPATH/src/github.com/zhangheli/goquery
     $ go test -bench=".*"
 
 ## Changelog
 
 **Note that goquery's API is now stable, and will not break.**
-
+*    **2015-09**    : Add `NewDocumentFromString` helper method 
 *    **2015-04-20** : Add `AttrOr` helper method to return the attribute's value or a default value if absent. Thanks to [piotrkowalczuk][piotr].
 *    **2015-02-04** : Add more manipulation functions - Prepend* - thanks again to [Andrew Stone][thatguystone].
 *    **2014-11-28** : Add more manipulation functions - ReplaceWith*, Wrap* and Unwrap - thanks again to [Andrew Stone][thatguystone].
@@ -73,7 +73,7 @@ import (
   "fmt"
   "log"
 
-  "github.com/PuerkitoBio/goquery"
+  "github.com/zhangheli/goquery"
 )
 
 func ExampleScrape() {
