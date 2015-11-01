@@ -29,7 +29,7 @@ Please note that because of the net/html dependency, goquery requires Go1.1+.
 ## Changelog
 
 **Note that goquery's API is now stable, and will not break.**
-*    **2015-09**    : Add `NewDocumentFromString` helper method 
+*    **2015-09-06** : Add `NewDocumentFromString` helper method 
 *    **2015-04-20** : Add `AttrOr` helper method to return the attribute's value or a default value if absent. Thanks to [piotrkowalczuk][piotr].
 *    **2015-02-04** : Add more manipulation functions - Prepend* - thanks again to [Andrew Stone][thatguystone].
 *    **2014-11-28** : Add more manipulation functions - ReplaceWith*, Wrap* and Unwrap - thanks again to [Andrew Stone][thatguystone].
